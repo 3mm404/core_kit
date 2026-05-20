@@ -1,8 +1,8 @@
 
 import 'package:core_kit/core/https/my_apis.dart';
-import 'package:core_kit/core/interseptor/auth_interceptor.dart';
-import 'package:core_kit/core/interseptor/error_interceptor.dart';
-import 'package:core_kit/core/storage/storage.dart';
+import 'package:core_kit/core/https/interseptor/auth_interceptor.dart';
+import 'package:core_kit/core/https/interseptor/error_interceptor.dart';
+import 'package:core_kit/core/https/storage/storage.dart';
 import 'package:dio/dio.dart';
 
 

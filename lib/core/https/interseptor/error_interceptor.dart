@@ -1,4 +1,4 @@
-import 'package:core_kit/core/exeptions/app_exception.dart';
+import 'package:core_kit/core/https/exeptions/app_exception.dart';
 import 'package:dio/dio.dart';
 
 class ErrorInterceptor extends Interceptor {
