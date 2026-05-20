@@ -8,22 +8,13 @@ class Api {
 
   Future<T> post<T extends Kit>(
     String path, {
-    required Map<String, dynamic> data,
+    Map<String, dynamic>? data,
     required T Function(Map<String, dynamic>) model,
-    String? dataKey,
-    List<String> extras = const [],
   }) async {
     final response = await http.client.post(path, data: data);
 
     final body = response.data as Map<String, dynamic>;
 
-    final payload = dataKey == null
-        ? body
-        : body[dataKey] as Map<String, dynamic>;
-
-    return model({
-      ...payload,
-      for (final key in extras) key: body[key],
-    });
+    return model(body);
   }
 }
